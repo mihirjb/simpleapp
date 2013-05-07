@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>Pasta transport app</title>
+  <%= stylesheet_link_tag    "application", "custom", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<header>	
+		<div class="navbar">
+			<div class="navbar-inner">
+				<ul class="nav">
+				<% if user_signed_in? %>
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Create new Payslip", "/payslips/new" %></li>
+					<li><%= link_to "Signed in as#{current_user.email}", root_path %></li>
+			<li></li>  
+			<li style= "float:right"><%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %></li>
+			<% else %>
+			<li><%= link_to "Sign in ", new_user_session_path %><li> <li><%= link_to "Sign Up", new_user_registration_path %></li>
+		<% end %>
+		</ul>	
+		</div>
+		</div>
+		</header>
+		<div class="container">
+			<% if flash[:notice] %>
+			<div class='alert <% if flash[:notice] =~ /Success/i %> alert-success <% else %> alert-error<% end %>'>
+			<p><%= flash[:notice] %></p>
+			</div>
+			<% end %>
+				
+				
 <%= yield %>
+</div>
 
 </body>
 </html>

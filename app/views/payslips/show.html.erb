@@ -1,0 +1,12 @@
+<% if @payslip.blank? %>
+	<h1>No tour package found</h1>
+	
+	<% else %>
+	
+	<div>
+		<h1><%= @payslip.status %></h1>
+		<p><%= @payslip.party %></p>
+		<p><%= @payslip.payslipnum %></p>
+	</div>
+	
+	<% end %>

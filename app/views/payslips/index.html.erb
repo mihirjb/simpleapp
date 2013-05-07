@@ -1,0 +1,16 @@
+<h1>All the payslips</h1>
+<%if @payslip.count == 0 %>
+	<p>No payslips yet</p>
+<% else %>
+<table class="table table-striped table-bordered">
+		<% if @payslip.count >0 %>
+			<% @payslip.each do |t| %>
+			<tr><td>
+					<h1><%= link_to t.payslipnum, "/payslips/#{t.id}/show" %></h1>
+					<p><%= t.party %></p>
+					<p><strong>Status: </strong><%= t.status %></p>
+				</td></tr>
+			<% end %>
+		<% end %>	
+<% end %>
+</table>
