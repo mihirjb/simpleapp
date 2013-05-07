@@ -14,7 +14,7 @@
 #
 
 class Payslip < ActiveRecord::Base
-  attr_accessible :paid_at, :party, :payslipnum, :source, :status, :user_id, :contactperson, :contactphone
+  attr_accessible :paid_at, :party, :payslipnum, :source, :status, :user_id, :contactperson, :contactphone, :lramount
   
   belongs_to :user
 end
