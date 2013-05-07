@@ -9,6 +9,9 @@
 		<th>Payslip made for</th>
 		<th>Created at destination</th>
 		<th>Paid at</th>
+		<th>Contact Person</th>
+		<th>Contact Phone</th>
+		<th>Created at time</th>
 		<th>Payment Status</th>
 		</tr>
 	</thead>
@@ -19,8 +22,12 @@
 					<%= t.party %></td>
 						<td>
 						<%= t.source %></td>	<td>
-							<%= t.paid_at %></td><td>
-					<%= t.status %></td></tr>
+							<%= t.paid_at %></td>
+						<td><%= t.contactperson %></td>
+						<td><%= t.contactphone %></td>
+						<td><%= t.created_at %></td>
+					<td><%= t.status %></td></tr>
+					
 			<% end %>
 		<% end %>	
 <% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507064221) do
+ActiveRecord::Schema.define(:version => 20130507075120) do
 
   create_table "payslips", :force => true do |t|
     t.integer  "payslipnum"
@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(:version => 20130507064221) do
     t.integer  "user_id"
     t.string   "paid_at"
     t.string   "source"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "contactperson"
+    t.string   "contactphone"
   end
 
   create_table "users", :force => true do |t|

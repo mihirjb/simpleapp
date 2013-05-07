@@ -24,6 +24,15 @@
 	<%= f.text_field :source %>
 </div>
 
+<div class="field">
+	<%= f.label :contactperson, "Contact Person" %>
+	<%= f.text_field :contactperson %>
+</div>
+<div class="field">
+	<%= f.label :contactphone, "Phone number" %>
+	<%= f.text_field :contactphone %>
+</div>
+
 
 <div class="field">
 <%= f.submit "Add", :disable_with => 'Adding...' %>
