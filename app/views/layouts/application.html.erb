@@ -14,7 +14,7 @@
 				<% if user_signed_in? %>
 				<li><%= link_to "Home", root_path %></li>
 				<li><%= link_to "Create new Payslip", "/payslips/new" %></li>
-					<li><%= link_to "Signed in as#{current_user.email}", root_path %></li>
+					<li><%= link_to "Signed in as #{current_user.email}", root_path %></li>
 			<li></li>  
 			<li style= "float:right"><%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %></li>
 			<% else %>
